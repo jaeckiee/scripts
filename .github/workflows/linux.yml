@@ -12,8 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Download
+    - name: Download gcc-8
       run: sudo apt-get install gcc-8
+    - name: Download
       run: wget https://github.com/jaeckiee/linux/archive/$(git rev-parse @:./linux).zip -O linux.zip
     - name: Unzip
       run: unzip linux.zip
